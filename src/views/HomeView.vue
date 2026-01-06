@@ -9,15 +9,12 @@ import Ratings from '@/components/Ratings.vue';
 </script>
 
 <template>
-    <Header />
+    <main>
     <Hero />
     <FeatureSection />
     <Cta />
     <Ratings />
     <Faq />
+    </main>
     <Footer />
 </template>
-
-<style scoped lang="scss">
-@use '../assets/style/main.scss' as *;
-</style>

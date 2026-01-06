@@ -6,10 +6,315 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
-/* Header */
+button {
+    cursor: pointer;
+}
+
+div#app {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.primaryBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background-color: $white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all .3s;
+
+    span {
+        text-wrap: nowrap;
+        font-weight: 500;
+        font-size: 15px;
+        color: $dark;
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+        path {
+            stroke: $dark;
+        }
+    }
+
+    &:hover {
+        background-color: $hover;
+    }
+}
+
+.secondaryBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($color: $white, $alpha: 0);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all .3s;
+
+    span {
+        text-wrap: nowrap;
+        font-weight: 500;
+        font-size: 15px;
+        color: $white;
+    }
+
+    &:hover {
+    background-color: rgba($color: $white, $alpha: 0.3);
+
+    }
+}
+
+
+
+
+/* Hero section */
+main {width: 100%;}
+section.hero {
+    background-color: $primary;
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+
+    /* Header */
+    header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        nav.desktopNav {
+            width: 1140px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2.5rem 0;
+            border-bottom: 1px solid $border;
+            position: relative;
+
+            a {
+                .logoOdoo {
+                    width: 88px;
+                }
+            }
+
+            .links {
+                display: flex;
+                align-items: center;
+                gap: 32px;
+                color: $white;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .buttons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+            }
+
+        }
+    }
+    
+    .heroContainer {
+        width: 1140px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            width: 40%;
+            gap: 40px;
+            color: $white;
+
+            h1 {
+                font-weight: 600;
+                font-size: 48px;
+                width: 70%;
+                line-height: 150%
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 180%;
+                width: 70%;
+                color: $white;
+            }
+
+            .bigCta {
+                background-color: $white;
+                border-radius: 8px;
+                border: none;
+                padding: 20px 32px;
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                transition: all .2s;
+
+                span {
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+                span.icon {
+                    font-weight: 600;
+                    font-size: 24px;
+                }
+
+                &:hover {
+                    background-color: $hover;
+                }
+            }
+
+            .trustedBy {
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                gap: 32px;
+                margin-top: 16px;
+
+                span {
+                    text-wrap: nowrap;
+                    font-weight: 500;
+                    font-size: 13px;
+                }
+
+                img {
+                    height: 28px;
+                }
+            }
+
+        }
+
+        .right {
+            width: 40%;
+
+            .cardHero {
+                width: 100%;
+                background-color: $white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                gap: 20px;
+                padding: 32px;
+                border-radius: 12px 12px 120px 12px;
+
+                .subtitle {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: $dark;
+                }
+
+                .top {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .thirdBtn {
+                        padding: 8px 16px;
+                        border: 2px solid $border;
+                        color: $text;
+                        font-size: 12px;
+                        font-weight: 400;
+                        border-radius: 8px;
+                        background-color: $white;
+                        transition: all .2s;
+
+                        &:hover {
+                            background-color: $hover;
+                        }
+                    }
+                }
+
+                img {
+                    width: 100%;
+                }
+
+                .bill {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: center;
+                    gap: 8px;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid $hover;
+
+                    .topBill {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .price {
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: $dark;
+                        }
+                        
+                    }
+
+                    p {
+                        color: $text;
+                    }
+                }
+
+                a {
+                    width: auto;
+                    display: flex;
+                    justify-content: start;
+                    align-items: end;
+                    padding-bottom: 4px;
+                    border-bottom: 2px dashed $primary;
+
+                    span {
+                        text-wrap: nowrap;
+                        font-size: 14px;
+                        color: $primary;
+                    }
+
+                    svg {
+                        height: 16px;
+
+                        path {
+                            stroke: $primary;
+                            stroke-width: 2px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
