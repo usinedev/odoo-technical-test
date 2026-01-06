@@ -12,9 +12,9 @@ import Ratings from '@/components/Ratings.vue';
     <main>
     <Hero />
     <FeatureSection />
-    <Cta />
     <Ratings />
     <Faq />
+    <Cta />
     </main>
     <Footer />
 </template>
