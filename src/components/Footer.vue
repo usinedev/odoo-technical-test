@@ -7,7 +7,7 @@
             <div class="top">
                 <div class="topLeft">
                     <h2>Brilliant solutions for your ideas</h2>
-                    <h3>Modern looking websites.</h3>
+                    <p>Modern looking websites.</p>
                 </div>
                 <div class="topRight">
                     <button class="docBtn">
