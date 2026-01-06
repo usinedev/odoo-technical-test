@@ -1,4 +1,5 @@
 <script setup>
+import Awards from '@/components/Awards.vue';
 import Cta from '@/components/Cta.vue';
 import Faq from '@/components/Faq.vue';
 import FeatureSection from '@/components/FeatureSection.vue';
@@ -13,6 +14,7 @@ import Ratings from '@/components/Ratings.vue';
     <Hero />
     <FeatureSection />
     <Ratings />
+    <Awards />
     <Faq />
     <Cta />
     </main>
