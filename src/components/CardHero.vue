@@ -7,7 +7,7 @@
             <span class="subtitle">Manage cards</span>
             <button class="thirdBtn">Add new</button>
         </div>
-        <img src="../assets/img/bank_card.png" alt="Bank card of John Snow">
+        <img src="../assets/img/bank-card.png" alt="Bank card of John Snow">
         <!-- For the bank card I took a screenshot because I think it should be an asset (and also to save time to be honest) -->
         <div class="bill">
             <div class="topBill">

@@ -269,6 +269,7 @@ section.hero {
 
                 img {
                     width: 100%;
+                    border-radius: 12px;
                 }
 
                 .bill {
@@ -296,6 +297,8 @@ section.hero {
 
                     p {
                         color: $text;
+                        font-size: 14px;
+                        font-weight: 400;
                     }
                 }
 
@@ -333,6 +336,75 @@ section.hero {
         }
     }
 }
+
+.featuresSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 80px 0;
+
+    .infiniteSolutions {
+        width: 1140px; 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $dark;
+        padding: 80px;
+        border-radius: 0 64px 0 64px;
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 16px;
+
+            p.title {
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            p {
+                color: $white;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 150%;
+            }
+        }
+
+        button {
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            gap: 16px;
+            border: none;
+            border-radius: 4px;
+            padding: 12px 24px;
+            background-color: $white;
+            transition: all .2s;
+
+            span {
+                color: $dark;
+                text-wrap: nowrap;
+            }
+
+            svg {
+                width: 16px;
+                path {
+                    fill: $dark;
+                }
+            }
+
+            &:hover {
+                background-color: $hover;
+            }
+        }
+    }
+}
+
+
 
 .awardsSection {
     width: 100%;
@@ -618,7 +690,7 @@ footer {
         .separator {
             height: 1px;
             width: 100%;
-            background: linear-gradient(90deg, #161348 10%, $footer 50%, #161348 90%);
+            background: linear-gradient(90deg, $dark 10%, $footer 50%, $dark 90%);
         }
 
         .top {
