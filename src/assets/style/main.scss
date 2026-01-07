@@ -18,6 +18,10 @@ button {
     cursor: pointer;
 }
 
+span {
+    text-wrap: nowrap;
+}
+
 div#app {
     width: 100%;
     display: flex;
@@ -38,7 +42,7 @@ div#app {
     transition: all .3s;
 
     span {
-        text-wrap: nowrap;
+        
         font-weight: 500;
         font-size: 15px;
         color: $dark;
@@ -68,7 +72,7 @@ div#app {
     transition: all .3s;
 
     span {
-        text-wrap: nowrap;
+        
         font-weight: 500;
         font-size: 15px;
         color: $white;
@@ -87,10 +91,17 @@ h3 {
     padding: 8px 12px;
     border-radius: 16px;
     background-color: $primary;
+    width: fit-content;
+}
+
+//temp
+svg {
+    max-width: 20px;
 }
 
 
 /* Hero section */
+
 main {width: 100%;}
 section.hero {
     background-image: url('../img/hero-bg.svg');
@@ -213,7 +224,7 @@ section.hero {
                 margin-top: 16px;
 
                 span {
-                    text-wrap: nowrap;
+                    
                     font-weight: 500;
                     font-size: 13px;
                 }
@@ -313,7 +324,7 @@ section.hero {
                     transition: all .2s;
 
                     span {
-                        text-wrap: nowrap;
+                        
                         font-size: 14px;
                         color: $primary;
                     }
@@ -337,6 +348,9 @@ section.hero {
     }
 }
 
+
+/* Features Section */
+
 .featuresSection {
     display: flex;
     flex-direction: column;
@@ -344,6 +358,172 @@ section.hero {
     justify-content: center;
     gap: 80px;
     padding: 80px 0;
+
+    .featureBlock {
+        width: 1140px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 80px 0;
+
+        .imageDiv {
+            width: 50%;
+        }
+
+        .textDiv {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            gap: 32px;
+
+            h3 {
+                background-color: $yellow;
+            }
+
+            p.title {
+                font-size: 32px;
+                font-weight: 400;
+                line-height: 150%;
+            }
+
+            p.paragraph {
+                color: $text;
+                line-height: 150%;
+                font-size: 18px;
+                font-weight: 300;
+            }
+        }
+
+        .playVideoBtn {
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            gap: 8px;
+            background-color: rgba($color: $white, $alpha: 0.8);
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba($color: $dark, $alpha: 0.1);
+            padding: 8px 16px;
+            transition: all .2s;
+
+            span {
+                color: $dark;
+                font-size: 14px;
+            }
+
+            svg {
+                width: 14px;
+                path {
+                    stroke: $dark;
+                    stroke-width: 2px;
+                }
+            }
+
+            &:hover {
+                background-color: rgba($color: $white, $alpha: 1.0);
+            }
+        }
+    }
+
+    .featureBlock.tools {
+        .imageDiv {
+            position: relative;
+        }
+        .awesomeProjects {
+            width: 80%;
+            background-color: $white;
+            box-shadow: 0 0 10px rgba($color: $dark, $alpha: 0.1);
+            padding: 32px 48px;
+            margin-top: 80px;
+            border: 1px solid $border;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            gap: 40px;
+
+
+            p.title {
+                color: $dark;
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            .subSection {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: center;
+                gap: 12px;
+
+                .top {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: start;
+
+                    .name {
+                        color: $dark;
+                        font-weight: 400;
+                        font-size: 16px;
+                    }
+
+                    .time {
+                        color: $text;
+                        font-weight: 300;
+                        font-size: 16px;
+                        display: flex;
+                        align-items: end;
+                        justify-content: center;
+                        gap: 8px;
+                        svg {
+                            width: 20px;
+                            path {
+                                stroke: $text;
+                            }
+                        }
+                    }
+                }
+
+                .timeline {
+                    height: 3px;
+                    border-radius: 2px;
+                    width: 100%;
+                }
+
+                .timeline.firstTimeline {
+                    background: linear-gradient(90deg, $yellow 0%, $yellow 38%, $hover 39%, $hover 100% );
+                }
+                .timeline.secondTimeline {
+                    background: linear-gradient(90deg, $yellow 0%, $yellow 40%, $hover 41%, $hover 100% );
+                }
+                .timeline.thirdTimeline {
+                    background: linear-gradient(90deg, $yellow 0%, $yellow 68%, $hover 69%, $hover 100% );
+                }
+            }
+        }
+
+        .image {
+            width: 60%;
+            height: 280px;
+            background-image: url('../img/img_01.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            bottom: 30%;
+            left: 40%;
+            padding: 16px;
+            display: flex;
+            align-items: start;
+            justify-content: end;
+            border-radius: 8px;
+        }
+    }
 
     .infiniteSolutions {
         width: 1140px; 
@@ -387,7 +567,7 @@ section.hero {
 
             span {
                 color: $dark;
-                text-wrap: nowrap;
+                
             }
 
             svg {
@@ -404,7 +584,7 @@ section.hero {
     }
 }
 
-
+/* Award Section */
 
 .awardsSection {
     width: 100%;
@@ -521,6 +701,9 @@ section.hero {
     }
 }
 
+
+/* FAQ Section */
+
 .faqSection {
     width: 100%;
     display: flex;
@@ -608,6 +791,9 @@ section.hero {
     }
 }
 
+
+/* CTA Section */
+
 .ctaSection {
     width: 100%;
     display: flex;
@@ -639,7 +825,7 @@ section.hero {
             transition: all .2s;
 
             span {
-                text-wrap: nowrap;
+                
                 color: $white;
                 font-size: 16px;
                 font-weight: 400;
@@ -669,6 +855,9 @@ section.hero {
         }
     }
 }
+
+
+/* Footer */
 
 footer {
     background-image: url('../img/footer-bg.svg');

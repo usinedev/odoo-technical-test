@@ -5,7 +5,54 @@
 <template>
     <section class="featuresSection">
 
-        
+        <div class="featureBlock tools">
+            <div class="imageDiv">
+                <div class="awesomeProjects">
+                    <p class="title">Awesome projects</p>
+                    <div class="subSection">
+                        <div class="top">
+                            <span class="name">Create the new logo</span>
+                            <span class="time">
+                                3:50
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 7L15 12L10 17" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </span>
+                        </div>
+                        <div class="timeline firstTimeline"></div>
+                    </div>
+                    <div class="subSection">
+                        <div class="top">
+                            <span class="name">Setup the color palette</span>
+                            <span class="time">
+                                4:00
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 7L15 12L10 17" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </span>
+                        </div>
+                        <div class="timeline secondTimeline"></div>
+                    </div>
+                    <div class="subSection">
+                        <div class="top">
+                            <span class="name">Wireframe and prototype</span>
+                            <span class="time">
+                                6:50
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 7L15 12L10 17" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </span>
+                        </div>
+                        <div class="timeline thirdTimeline"></div>
+                    </div>
+                </div>
+                <div class="image">
+                    <button class="playVideoBtn">
+                        <span>Play video</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.4086 9.35258C22.5305 10.5065 22.5305 13.4935 20.4086 14.6474L7.59662 21.6145C5.53435 22.736 3 21.2763 3 18.9671L3 5.0329C3 2.72368 5.53435 1.26402 7.59661 2.38548L20.4086 9.35258Z" stroke-width="1.5"/></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="textDiv">
+                <h3>Tools</h3>
+                <p class="title">We build for designers and developers</p>
+                <p class="paragraph">Get components and examples, including tons of variables that will help you grow your business.</p>
+            </div>
+        </div>
         
         <div class="infiniteSolutions">
             <div class="left">
