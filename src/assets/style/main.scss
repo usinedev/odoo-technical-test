@@ -593,22 +593,213 @@ section.hero {
     }
 
     .featureBlock.technology {
-        .textDiv {
-            h3 {
-                background-color: $primary;
-            }
-            a {
-                color: $primary;
-                border-bottom: 3px solid $primary;
-                padding-bottom: 6px;
-                transition: all .2s;
 
-                &:hover {
-                    color: $primary-dark;
-                    border-bottom: 3px solid $primary-dark;
+        .imageDiv {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            height: fit-content;
+
+            .left {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: center;
+                gap: 32px;
+
+                .jimmy {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid $border;
+                    border-radius: 16px;
+                    box-shadow: 0 0 12px rgba($color: $dark, $alpha: 0.2);
+
+                    img {
+                        width: 100%;
+                        border-radius: 16px 16px 0 0;
+                    }
+
+                    .content {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 24px;
+
+                        .leftContent {
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+
+                            span {
+                                color: $white;
+                                padding: 12px;
+                                border-radius: 100%;
+                                background-color: $yellow;
+                                font-size: 14px;
+                            }
+
+                            p {
+                                color: $dark;
+                                font-size: 15px;
+                                
+                            }
+                        }
+
+                        img {
+                            width: 20px;
+                        }
+                    }
+                }
+
+                .component {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-radius: 16px;
+                    border: 1px solid $border;
+                    box-shadow: 0 0 12px rgba($color: $dark, $alpha: 0.2);
+                    padding: 24px;
+
+                    div.icon{
+                        width: 48px;
+                        height: 48px;
+                        background-color: $green;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 100%;
+
+                        img {
+                            width: 60%;
+                        }
+                    }
+
+                    div.text {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 8px;
+
+                        p.title {
+                            font-size: 16px;
+                            font-weight: 500;
+                            color: $dark;
+                        }
+
+                        p {
+                            font-size: 14px;
+                            color: $text;
+                            font-weight: 400;
+                        }
+                    }
                 }
             }
+
+            .right {
+                width: 50%;
+
+                .card {
+                background-color: $white;
+                box-shadow: 0 0 10px rgba($color: $dark, $alpha: 0.2);
+                width: 100%;
+                padding: 40px;
+                border-radius: 16px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                height: 300px;
+
+                p {
+                    color: $text;
+                    line-height: 150%;
+                    font-size: 16px;
+                    text-align: center;
+                }
+
+                a {
+                    padding-bottom: 4px;
+                    border-bottom: 3px solid $dark;
+                    color: $dark;
+                    transition: all .1s;
+
+                    &:hover {
+                        padding-bottom: 2px;
+                        border-bottom: 5px solid $primary-dark;
+                        color: $primary-dark;
+                    }
+                }
+
+                img {
+                    width: 75%;
+                }
+                }
+
+                .ratingCard {
+                    .stars {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 8px 0;
+
+                        svg {
+                            width: 24px;
+                        }
+
+                        .yellowStar {
+                            path{
+                                stroke: $yellow;
+                            }
+                        }
+                        .greyStar {
+                            path{
+                                stroke: lightgrey;
+                            }
+                        }
+                    }
+
+                    p.rating {
+                        color: $dark;
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+
+                    p.ratingSource {
+                        color: $text;
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+                }
+
+
+            }
         }
+            
+            .textDiv {
+                h3 {
+                    background-color: $primary;
+                }
+                a {
+                    color: $primary;
+                    border-bottom: 3px solid $primary;
+                    padding-bottom: 6px;
+                    transition: all .2s;
+
+                    &:hover {
+                        color: $primary-dark;
+                        border-bottom: 3px solid $primary-dark;
+                    }
+                }
+            }
     }
 
     .featureBlock.easy {
@@ -1234,7 +1425,7 @@ footer {
     section.hero {
         height: auto;
         min-height: 100dvh;
-        padding: 120px 0 80px;
+        padding: 0px 0 80px;
 
         header {
             position: static;
@@ -1316,7 +1507,19 @@ footer {
             }
         }
 
+        .featureBlock.technology, .featureBlock.tools {
+        flex-direction: column-reverse;
+        }
+
         .featureBlock.tools {
+            .imageDiv {
+            height: fit-content;
+
+            .image {
+                height: 400px;
+            }
+            }
+
             .awesomeProjects {
                 width: 100%;
             }
