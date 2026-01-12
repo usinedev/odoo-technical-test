@@ -1,10 +1,10 @@
 /* Colors */
 
 $primary: #1e90ff;
-$primary-dark: #0b3c75;
+$primary-dark: #1076dd;
 
 $yellow: #facc15;
-$green: #22c55e;
+$green: #5CCAA7;
 
 $dark: #161348;
 $text: #475569;
@@ -14,3 +14,12 @@ $white: #ffffff;
 $border: #e5e7eb;
 $hover: #eef1f5;
 $footer: #7C849F;
+
+
+/* Layout helpers */
+
+$container-max: 1140px;
+$container-gutter: 24px;
+$bp-lg: 1024px;
+$bp-md: 768px;
+$bp-sm: 560px;

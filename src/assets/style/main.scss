@@ -1,6 +1,12 @@
 /* Import de mes variables */
 @use './variables' as *;
 
+@mixin container {
+    width: min($container-max, calc(100% - #{$container-gutter * 2}));
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Base */
 * {
     margin: 0;
@@ -94,10 +100,6 @@ h3 {
     width: fit-content;
 }
 
-//temp
-svg {
-    max-width: 20px;
-}
 
 
 /* Hero section */
@@ -108,7 +110,7 @@ section.hero {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100dvh;
+    height: 90dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -128,7 +130,7 @@ section.hero {
         transform: translateX(-50%);
         
         nav.desktopNav {
-            width: 1140px;
+            @include container;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -163,7 +165,7 @@ section.hero {
     }
     
     .heroContainer {
-        width: 1140px;
+        @include container;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -220,8 +222,10 @@ section.hero {
                 display: flex;
                 align-items: center;
                 justify-content: start;
-                gap: 32px;
+                gap: 24px;
                 margin-top: 16px;
+                flex-wrap: wrap;
+                max-width: 100%;
 
                 span {
                     
@@ -231,6 +235,8 @@ section.hero {
 
                 img {
                     height: 28px;
+                    max-width: 120px;
+                    width: auto;
                 }
             }
 
@@ -360,7 +366,7 @@ section.hero {
     padding: 80px 0;
 
     .featureBlock {
-        width: 1140px;
+        @include container;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -369,6 +375,11 @@ section.hero {
 
         .imageDiv {
             width: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            border-radius: 8px;
+            height: 400px;
         }
 
         .textDiv {
@@ -395,6 +406,10 @@ section.hero {
                 font-size: 18px;
                 font-weight: 300;
             }
+        }
+
+        .imageDiv {
+            position: relative;
         }
 
         .playVideoBtn {
@@ -429,9 +444,7 @@ section.hero {
     }
 
     .featureBlock.tools {
-        .imageDiv {
-            position: relative;
-        }
+
         .awesomeProjects {
             width: 80%;
             background-color: $white;
@@ -525,8 +538,138 @@ section.hero {
         }
     }
 
+    .featureBlock.features {
+
+        .textDiv {
+            h3 {
+                background-color: $green;
+            }
+            p {
+                width: 90%;
+                font-size: 20px;
+                color: $dark;
+                line-height: 200%;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: center;
+                gap: 16px;
+
+                li {
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    gap: 16px;
+                    color: $green;
+                    font-size: 15px;
+
+                    .doneIcon {
+                        width: 16px;
+                        height: 16px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: $green;
+                        border-radius: 4px;
+                        padding: 2px;
+                    }
+                }
+            }
+        }
+
+        .imageDiv {
+            background-image: url('../img/img_02.jpg');
+
+            .playVideoBtn {
+                position: absolute;
+                top: 16px;
+                left: 16px;
+            }
+        }
+    }
+
+    .featureBlock.technology {
+        .textDiv {
+            h3 {
+                background-color: $primary;
+            }
+            a {
+                color: $primary;
+                border-bottom: 3px solid $primary;
+                padding-bottom: 6px;
+                transition: all .2s;
+
+                &:hover {
+                    color: $primary-dark;
+                    border-bottom: 3px solid $primary-dark;
+                }
+            }
+        }
+    }
+
+    .featureBlock.easy {
+        .textDiv {
+            .btns {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 32px;
+
+                button {
+                    background-color: black;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 16px;
+                    border-radius: 8px;
+                    padding: 10px 20px;
+                    transition: all .2s;
+
+                    img {
+                        height: 40px;
+                    }
+
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        color: $white;
+
+                        .small {
+                            font-size: 12px;
+                            font-weight: 400;
+                        }
+                        .big {
+                            font-size: 20px;
+                            font-weight: 500;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: rgba($color: #000000, $alpha: 0.8);
+                    }
+                }
+            }
+        }
+
+        .imageDiv {
+            background-image: url('../img/img_03.jpg');
+
+            .playVideoBtn {
+                position: absolute;
+                left: 16px;
+                top: 16px;
+            }
+        }
+    }
+
     .infiniteSolutions {
-        width: 1140px; 
+        @include container;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -599,7 +742,7 @@ section.hero {
     gap: 64px;
 
     .awardsTop {
-        padding-left: calc( (100vw - 1140px) / 2 );
+        padding-left: max($container-gutter, calc((100vw - #{$container-max}) / 2));
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -614,7 +757,7 @@ section.hero {
     }
 
     .awardWinners {
-        padding-left: calc( (100vw - 1140px) / 2 );
+        padding-left: max($container-gutter, calc((100vw - #{$container-max}) / 2));
         display: flex;
         gap: 32px;
         width: 100%;
@@ -714,7 +857,7 @@ section.hero {
     padding: 80px 0;
 
     .faqTop {
-        width: 1140px;
+        @include container;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -735,29 +878,34 @@ section.hero {
     }
 
     .questions {
-        width: 1140px;
+        @include container;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 32px;
 
-        .questionsContainer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 50%;
-            gap: 32px;
-
-            .question {
-                width: 100%;
+            .questionsContainer {
                 display: flex;
+                flex-direction: column;
                 align-items: center;
-                justify-content: space-between;
-                padding: 24px;
-                border-radius: 8px;
-                border: none;
-                background-color: $white;
+                justify-content: center;
+                width: 50%;
+                gap: 32px;
+
+                .qaItem {
+                    width: 100%;
+                }
+
+                .question {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    padding: 24px;
+                    border-radius: 8px;
+                    border: none;
+                    background-color: $white;
                 box-shadow: 0 0 10px rgba($color: $dark, $alpha: 0.2);
                 transition: all .2s;
 
@@ -785,6 +933,15 @@ section.hero {
 
                 &:hover {
                     box-shadow: 0 0 10px rgba($color: $dark, $alpha: 0.4);
+                }
+
+                .answer {
+                    width: 100%;
+                    margin-top: 12px;
+                    color: $text;
+                    font-size: 15px;
+                    line-height: 160%;
+                    text-align: start;
                 }
             }
         }
@@ -868,7 +1025,7 @@ footer {
     justify-content: center;
 
     .footerContainer {
-        width: 1140px;
+        @include container;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1058,5 +1215,304 @@ footer {
                 }
             }
         }
+    }
+}
+
+/* Responsive */
+@media (max-width: $bp-lg) {
+    nav.desktopNav {
+        .links,
+        .buttons {
+            display: none!important;
+        }
+
+        .burgerBtn {
+            display: inline-flex;
+        }
+    }
+
+    section.hero {
+        height: auto;
+        min-height: 100dvh;
+        padding: 120px 0 80px;
+
+        header {
+            position: static;
+            transform: none;
+        }
+
+        nav.desktopNav {
+            flex-wrap: wrap;
+            gap: 16px;
+
+            .burgerBtn {
+                display: inline-flex;
+                margin-left: auto;
+            }
+
+            .links,
+            .buttons {
+                display: none;
+            }
+        }
+
+        .mobileMenu {
+            @include container;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid $border;
+
+            .mobileLinks {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                color: $white;
+            }
+
+            .mobileButtons {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                align-items: stretch;
+            }
+        }
+
+        .heroContainer {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 48px;
+
+            .left,
+            .right {
+                width: 100%;
+            }
+
+            .left {
+                h1,
+                p {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .featuresSection {
+        gap: 48px;
+
+        .featureBlock {
+            flex-direction: column;
+            gap: 40px;
+            padding: 56px 0;
+
+            .imageDiv,
+            .textDiv {
+                width: 100%;
+            }
+
+            .imageDiv {
+                height: 320px;
+            }
+        }
+
+        .featureBlock.tools {
+            .awesomeProjects {
+                width: 100%;
+            }
+
+            .image {
+                position: static;
+                width: 100%;
+                height: 220px;
+                margin-top: 20px;
+            }
+        }
+
+        .infiniteSolutions {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 24px;
+            padding: 48px;
+        }
+    }
+
+    .awardsSection {
+        padding: 64px 0 120px;
+
+        .awardWinners {
+            flex-wrap: wrap;
+            gap: 24px;
+            padding-left: $container-gutter;
+            padding-right: $container-gutter;
+
+            .card {
+                width: calc(50% - 12px);
+            }
+        }
+    }
+}
+
+@media (min-width: $bp-lg+1) {
+    section.hero {
+        header {
+            nav.desktopNav {
+                .burgerBtn {
+                    display: none;
+                }
+
+                .links,
+                .buttons {
+                    display: flex;
+                }
+            }
+
+            .mobileMenu {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: $bp-md) {
+    section.hero {
+        header {
+            .mobileMenu {
+                padding-bottom: 8px;
+            }
+        }
+    }
+
+    .featuresSection {
+        .featureBlock.easy {
+            .textDiv {
+                .btns {
+                    flex-direction: column;
+                    align-items: stretch;
+
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .faqSection {
+        .faqTop {
+            p.title {
+                font-size: 32px;
+            }
+        }
+
+        .questions {
+            flex-direction: column;
+
+            .questionsContainer {
+                width: 100%;
+            }
+        }
+    }
+
+    .ctaSection {
+        text-align: center;
+
+        .cta {
+            flex-direction: column;
+        }
+    }
+
+    footer {
+        .footerContainer {
+            .top {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .mid {
+                flex-direction: column;
+                gap: 32px;
+
+                .midLeft,
+                .midRight {
+                    width: 100%;
+                }
+
+                .midRight {
+                    flex-wrap: wrap;
+
+                    .column {
+                        width: 50%;
+                    }
+                }
+            }
+
+            .bottom {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: $bp-sm) {
+    section.hero {
+        header {
+            nav.desktopNav {
+                .burgerBtn {
+                    padding: 6px;
+                }
+            }
+        }
+    }
+
+    .awardsSection {
+        .awardWinners {
+            .card {
+                width: 100%;
+            }
+        }
+    }
+
+    footer {
+        .footerContainer {
+            padding-top: 96px;
+
+            .mid {
+                .midRight {
+                    .column {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Burger button and mobile menu defaults */
+header {
+    .burgerBtn {
+        display: none;
+        border: none;
+        background-color: unset;
+        border-radius: 8px;
+        padding: 8px;
+        gap: 8px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            display: block;
+            width: 32px;
+            height: 3px;
+            background-color: $white;
+            border-radius: 2px;
+        }
+    }
+
+    .mobileMenu {
+        display: none;
     }
 }

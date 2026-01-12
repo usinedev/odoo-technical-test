@@ -53,6 +53,71 @@
                 <p class="paragraph">Get components and examples, including tons of variables that will help you grow your business.</p>
             </div>
         </div>
+
+        <section class="featureBlock features">
+            <div class="textDiv">
+                <h3>Features</h3>
+                <p>Get components and examples, including tons of variables that will help you grow your business.</p>
+                <ul>
+                    <li>
+                        <div class="doneIcon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.7071 6.29289C20.0976 6.68342 20.0976 7.31658 19.7071 7.70711L10.4142 17C9.63316 17.7811 8.36683 17.781 7.58579 17L3.29289 12.7071C2.90237 12.3166 2.90237 11.6834 3.29289 11.2929C3.68342 10.9024 4.31658 10.9024 4.70711 11.2929L9 15.5858L18.2929 6.29289C18.6834 5.90237 19.3166 5.90237 19.7071 6.29289Z" fill="#FFFFFF"/></svg></div>
+                        Perfect for modern startups
+                    </li>
+                    <li>
+                        <div class="doneIcon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.7071 6.29289C20.0976 6.68342 20.0976 7.31658 19.7071 7.70711L10.4142 17C9.63316 17.7811 8.36683 17.781 7.58579 17L3.29289 12.7071C2.90237 12.3166 2.90237 11.6834 3.29289 11.2929C3.68342 10.9024 4.31658 10.9024 4.70711 11.2929L9 15.5858L18.2929 6.29289C18.6834 5.90237 19.3166 5.90237 19.7071 6.29289Z" fill="#FFFFFF"/></svg></div>
+                        Fully customizable and scalable
+                    </li>
+                </ul>
+            </div>
+            <div class="imageDiv">
+                <button class="playVideoBtn">
+                    <span>Play video</span>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.4086 9.35258C22.5305 10.5065 22.5305 13.4935 20.4086 14.6474L7.59662 21.6145C5.53435 22.736 3 21.2763 3 18.9671L3 5.0329C3 2.72368 5.53435 1.26402 7.59661 2.38548L20.4086 9.35258Z" stroke-width="1.5"/></svg>
+                </button>
+            </div>
+        </section>
+
+        <section class="featureBlock technology">
+            <div class="imageDiv">
+                
+            </div>
+            <div class="textDiv">
+                <h3>Technology</h3>
+                <p class="title">We use the latest technologies on the market</p>
+                <p class="paragraph">Get components and examples, including tons of variables that will help you grow your business.</p>
+                <a href="">See case studies</a>
+            </div>
+        </section>
+
+        <section class="featureBlock easy">
+            <div class="textDiv">
+                <h3>Easy to install</h3>
+                <p class="title">Download, install and run.</p>
+                <p class="paragraph">Get components and examples, including tons of variables that will help you grow your business.</p>
+                <div class="btns">
+                    <button class="downloadBtn">
+                        <img src="../assets/logos/apple.png" alt="Logo de Apple">
+                        <div>
+                            <span class="small">Download from</span>
+                            <span class="big">App Store</span>
+                        </div>
+                    </button>
+                    <button class="downloadBtn">
+                        <img src="../assets/logos/play-store.png" alt="Logo de Apple">
+                        <div>
+                            <span class="small">Download from</span>
+                            <span class="big">Play Store</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="imageDiv">
+                <button class="playVideoBtn">
+                    <span>Play video</span>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.4086 9.35258C22.5305 10.5065 22.5305 13.4935 20.4086 14.6474L7.59662 21.6145C5.53435 22.736 3 21.2763 3 18.9671L3 5.0329C3 2.72368 5.53435 1.26402 7.59661 2.38548L20.4086 9.35258Z" stroke-width="1.5"/></svg>
+                </button>
+            </div>
+        </section>
         
         <div class="infiniteSolutions">
             <div class="left">
